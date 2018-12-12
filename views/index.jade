@@ -1,0 +1,54 @@
+extends layout
+
+block content
+  h1= title
+  p welcome to RESTful Web Service
+
+  // Wrapper
+  #wrapper
+
+    // BOOK INFO
+    #userInfo
+      h2 Book Info
+      p
+        strong Book Name:
+        |  <span id='userInfoBook Name'></span>
+        br
+        strong Author Name:
+        |  <span id='userInfoAuthor Name'></span>
+        br
+        strong Type of book:
+        |  <span id='userInfoType of book'></span>
+        br
+        strong Publish Date:
+        |  <span id='userInfoPublish Date'></span>
+    // /USER INFO
+
+    // Book LIST
+    h2 Book List
+    #userList
+      table
+        thead
+          th Book
+          th Author Name
+          th Delete?
+        tbody
+    // /USER LIST
+
+    // ADD USER
+    h2 Add Book
+    #addUser
+      fieldset
+        input#inputUserName(type='text', placeholder='Book Name')
+        input#inputUserEmail(type='text', placeholder='Author Name')
+        br
+        input#inputUserFullname(type='text', placeholder='Publish Date')
+        input#inputUserAge(type='text', placeholder='Type Of Book')
+        br
+        input#inputUserLocation(type='text', placeholder='Cover Color')
+        input#inputUserGender(type='text', placeholder='Number of page')
+        br
+        button#btnAddUser Add Book
+    // /ADD USER
+
+  // /WRAPPER
